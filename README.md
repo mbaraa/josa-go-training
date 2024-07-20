@@ -49,8 +49,8 @@
 
 ### Simple CLIs
 
-- Youtube downloader
-- Base converter
+- YouTube downloader
+- YouTube searcher
 
 ## Day 4
 
