@@ -2,7 +2,7 @@
 
 **Slides' Link**
 
-- [Click Me](https://slidemd.mbaraa.xyz/slides/b742195690fa4a8f97906787307b6a8e)
+- [Click Me](https://slidemd.mbaraa.xyz/slides/2f445a7c023147b69847fe300a2de309)
 - [Go tour](https://go.dev/tour)
 
 **Software links**
