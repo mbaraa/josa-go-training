@@ -46,7 +46,7 @@ func (k *KeyboardHandler) Listen() error {
 		}
 
 		if key == keyboard.KeyCtrlC {
-			keyboard.Close()
+			k.Close()
 			os.Exit(0)
 		}
 
@@ -56,4 +56,8 @@ func (k *KeyboardHandler) Listen() error {
 		}
 		callback()
 	}
+}
+
+func (k *KeyboardHandler) Close() {
+	keyboard.Close()
 }

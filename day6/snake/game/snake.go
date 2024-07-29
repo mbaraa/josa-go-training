@@ -11,19 +11,29 @@ type Snake struct {
 	nodes *list.List
 }
 
-func NewSnake(numNodes int, position canvas.Point, content string) *Snake {
+func NewSnake(numNodes int, position canvas.Point) *Snake {
 	nodes := list.New()
 
 	lastX := position.X
 	for i := 0; i < numNodes; i++ {
-		nodes.PushBack(canvas.NewPoint(lastX, position.Y, content))
+		nodes.PushBack(canvas.NewPoint(lastX, position.Y, position.Content()))
 		lastX -= 1
 	}
 
 	return &Snake{
-		cellContent: content,
+		cellContent: position.Content(),
 		nodes:       nodes,
 	}
+}
+
+func (s *Snake) AddNode() {
+	tail := s.Tail()
+	tail.X -= 1
+	s.nodes.PushBack(tail)
+}
+
+func (s *Snake) Nodes() list.List {
+	return *s.nodes
 }
 
 func (s *Snake) MoveUp() {
